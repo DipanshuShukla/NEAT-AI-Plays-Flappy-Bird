@@ -1,5 +1,5 @@
 from FlappyBird import *
-
+import neat
 
 def main():
     bird = Bird(230, 350)
