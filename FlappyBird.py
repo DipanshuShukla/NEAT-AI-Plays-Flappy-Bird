@@ -1,16 +1,17 @@
 import pygame
 import random
+import os
 
 pygame.font.init()
 WIN_WIDTH, WIN_HEIGHT = 500, 800
 
 # IMAGES
-BIRD_IMG = [pygame.transform.scale2x(pygame.image.load("bird1.png")),
-            pygame.transform.scale2x(pygame.image.load("bird2.png")),
-            pygame.transform.scale2x(pygame.image.load("bird3.png"))]
-PIPE_IMG = pygame.transform.scale2x(pygame.image.load("pipe.png"))
-BG_IMG = pygame.transform.scale2x(pygame.image.load("bg.png"))
-BASE_IMG = pygame.transform.scale2x(pygame.image.load("base.png"))
+BIRD_IMG = [pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bird1.png"))),
+            pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bird2.png"))),
+            pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bird3.png")))]
+PIPE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "pipe.png")))
+BG_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bg.png")))
+BASE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "base.png")))
 
 STAT_FONT = pygame.font.SysFont("comicsans", 50)
 
