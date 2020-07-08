@@ -28,8 +28,8 @@ class Base:
     width = BASE_IMG.get_width()
     img = BASE_IMG
 
-    def __init__(self, y):
-        self.y = y
+    def __init__(self):
+        self.y = 730
         self.x1 = 0
         self.x2 = self.width
 
@@ -60,9 +60,9 @@ class Bird:
     rot_vel = 20
     animation_time = 5
 
-    def __init__(self, x, y):
-        self.Xpos = x
-        self.Ypos = y
+    def __init__(self):
+        self.Xpos = 230
+        self.Ypos = 350
         self.tilt = 0
         self.tick_count = 0
         self.vel = 0
@@ -179,8 +179,8 @@ def Draw_Window(win, bird, pipes, base, SCORE):
 
 if __name__ == "__main__":
     def main():
-        bird = Bird(230, 350)
-        base = Base(730)
+        bird = Bird()
+        base = Base()
         pipes = [Pipe()]
 
         run = True
