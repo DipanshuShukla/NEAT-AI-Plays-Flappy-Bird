@@ -1,8 +1,10 @@
 from FlappyBird import *
 import neat
 
+GEN = 0
 
-def Draw_Window(win, birds, pipes, base, SCORE):
+
+def Draw_Window(win, birds, pipes, base, SCORE, GEN):
     WINDOW.blit(BG_IMG, (0, 0))
 
     for pipe in pipes:
@@ -10,6 +12,9 @@ def Draw_Window(win, birds, pipes, base, SCORE):
 
     text = STAT_FONT.render("Score: " + str(SCORE), 1, WHITE)
     WINDOW.blit(text, (WIN_WIDTH - 10 - text.get_width(), 10))
+
+    text = STAT_FONT.render("Gen: " + str(GEN-1), 1, WHITE)
+    WINDOW.blit(text, (10, 10))
 
     base.Draw(win)
 
@@ -20,6 +25,8 @@ def Draw_Window(win, birds, pipes, base, SCORE):
 
 
 def main(genomes, config):
+    global GEN
+    GEN += 1
     nets = []
     birds = []
     ge = []
@@ -40,7 +47,7 @@ def main(genomes, config):
     Score = 0
 
     while run:
-        clock.tick(40)
+        clock.tick(30)
 
         if len(birds) <= 0:
             run = False
@@ -95,7 +102,7 @@ def main(genomes, config):
                 nets.pop(x)
                 ge.pop(x)
 
-        Draw_Window(WINDOW, birds, pipes, base, Score)
+        Draw_Window(WINDOW, birds, pipes, base, Score, GEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -106,8 +113,8 @@ def main(genomes, config):
 
 def Run(config_file):
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
-                         neat.DefaultSpeciesSet, neat.DefaultStagnation,
-                         config_file)
+                                neat.DefaultSpeciesSet, neat.DefaultStagnation,
+                                config_file)
 
     p = neat.Population(config)
 
