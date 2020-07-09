@@ -124,7 +124,7 @@ class Pipe:
     vel = 5
 
     def __init__(self):
-        self.x = 600
+        self.x = 500
         self.height = 0
         self.top = 0
         self.bottom = 0

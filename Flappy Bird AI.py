@@ -4,7 +4,7 @@ import neat
 GEN = 0
 
 
-def Draw_Window(win, birds, pipes, base, SCORE, GEN):
+def Draw_Window(win, birds, pipes, base, SCORE, Gen, P):
     WINDOW.blit(BG_IMG, (0, 0))
 
     for pipe in pipes:
@@ -13,8 +13,11 @@ def Draw_Window(win, birds, pipes, base, SCORE, GEN):
     text = STAT_FONT.render("Score: " + str(SCORE), 1, WHITE)
     WINDOW.blit(text, (WIN_WIDTH - 10 - text.get_width(), 10))
 
-    text = STAT_FONT.render("Gen: " + str(GEN-1), 1, WHITE)
+    text = STAT_FONT.render("Gen: " + str(Gen-1), 1, WHITE)
     WINDOW.blit(text, (10, 10))
+
+    text = STAT_FONT.render("Alive: " + str(P), 1, WHITE)
+    WINDOW.blit(text, (10, 50))
 
     base.Draw(win)
 
@@ -32,7 +35,8 @@ def main(genomes, config):
     ge = []
 
     for genome_id, genome in genomes:
-        genome.fitness = 0  # start with fitness level of 0
+        genome.fitness = 0
+
         net = neat.nn.FeedForwardNetwork.create(genome, config)
         nets.append(net)
         birds.append(Bird())
@@ -102,7 +106,7 @@ def main(genomes, config):
                 nets.pop(x)
                 ge.pop(x)
 
-        Draw_Window(WINDOW, birds, pipes, base, Score, GEN)
+        Draw_Window(WINDOW, birds, pipes, base, Score, GEN, len(birds))
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
