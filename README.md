@@ -8,3 +8,5 @@ Flappy Bird is a side-scrolling mobile game featuring 2D retro style graphics. T
 
 ## Neuroevolution of Augmenting Topologies (NEAT)
 NeuroEvolution of Augmenting Topologies (NEAT) is a genetic algorithm (GA) for the generation of evolving artificial neural networks (a neuroevolution technique) developed by Ken Stanley in 2002 while at The University of Texas at Austin. It alters both the weighting parameters and structures of networks, attempting to find a balance between the fitness of evolved solutions and their diversity. It is based on applying three key techniques: tracking genes with history markers to allow crossover among topologies, applying speciation (the evolution of species) to preserve innovations, and developing topologies incrementally from simple initial structures ("complexifying").
+
+![Image](imgs/NEAT.PNG)
