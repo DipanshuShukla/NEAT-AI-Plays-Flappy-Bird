@@ -29,7 +29,7 @@ One difficulty in this setup is with the implementation of crossover - how does 
 
 Another potential difficulty is that a structural mutation - as opposed to mutations in, for instance, the weights of the connections - such as the addition of a node or connection can, while being promising for the future, be disruptive in the short-term (until it has been fine-tuned by less-disruptive mutations). How NEAT deals with this is by dividing genomes into species, which have a close genomic distance due to similarity, then having competition most intense within species, not between species (fitness sharing). How is genomic distance measured? It uses a combination of the number of non-homologous nodes and connections with measures of how much homologous nodes and connections have diverged since their common origin. (Non-homologous nodes and connections are termed disjoint or excess, depending on whether the numbers are from the same range or beyond that range; like most NEAT implementations, this one makes no distinction between the two.)
 
-![Image](imgs/NEAT1.PNG)
-![Image](imgs/NEAT2.PNG)
+![Image](imgs/NEAT1.png)
+![Image](imgs/NEAT2.png)
 
 For more information on NEAT checkout the official NEAT-Python [Github Repo](https://github.com/CodeReclaimers/neat-python) or the [official documentation](https://neat-python.readthedocs.io/en/latest/index.html).
