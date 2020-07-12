@@ -14,10 +14,12 @@ BG_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bg.png
 BASE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "base.png")))
 
 STAT_FONT = pygame.font.SysFont("comicsans", 50)
+LABEL_FONT = pygame.font.SysFont("comicsans", 20)
 
 # COLORS
 Yellow = [255, 255, 0]
 WHITE = [255, 255, 255]
+BLACK = [0,0,0]
 
 WINDOW = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 pygame.display.set_caption("Flappy Bird")
@@ -174,6 +176,10 @@ def Draw_Window(win, bird, pipes, base, SCORE):
 
     base.Draw(win)
     bird.Draw(win)
+
+    text = LABEL_FONT.render("{}".format("Press SPACE to jump."), 1, BLACK)
+    WINDOW.blit(text, (int(WIN_WIDTH/2 - text.get_width()//2), int(778)))
+
     pygame.display.update()
 
 
