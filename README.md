@@ -4,12 +4,16 @@ This in an implementation of NEAT to create an AI that plays the classic game of
 ## Flappy Bird
 Flappy Bird is a side-scrolling mobile game featuring 2D retro style graphics. The objective is to direct a flying bird, named "Faby", who moves continuously to the right, between sets of Mario-like pipes. If the player touches the pipes, they lose. Faby briefly flaps upward each time that the player taps the screen; if the screen is not tapped, Faby falls because of gravity; each pair of pipes that he navigates between earns the player a single point, with medals awarded for the score at the end of the game. No medal is awarded to scores less than ten. A bronze medal is given to scores between ten and twenty. In order to receive the silver medal, the player must reach twenty points. The gold medal is given to those who score at least thirty points. Players who achieve a score of forty or higher receive a platinum medal. Android devices enabled the access of world leaderboards, through Google Play.
 
-![Image](imgs/SS.PNG)
+<p align="center">
+<img src = "imgs/SS.PNG">
+</p>
 
 ## Neuroevolution of Augmenting Topologies (NEAT)
 NeuroEvolution of Augmenting Topologies (NEAT) is a genetic algorithm (GA) for the generation of evolving artificial neural networks (a neuroevolution technique) developed by Ken Stanley in 2002 while at The University of Texas at Austin. It alters both the weighting parameters and structures of networks, attempting to find a balance between the fitness of evolved solutions and their diversity. It is based on applying three key techniques: tracking genes with history markers to allow crossover among topologies, applying speciation (the evolution of species) to preserve innovations, and developing topologies incrementally from simple initial structures ("complexifying").
 
-![Image](imgs/NEAT.PNG)
+<p align="center">
+<img src = "imgs/NEAT.PNG">
+</p>
 
 ### NEAT Overview
 NEAT (NeuroEvolution of Augmenting Topologies) is an evolutionary algorithm that creates artificial neural networks. For a detailed description of the algorithm, you should probably go read some of Stanley’s papers on his website.
@@ -29,8 +33,10 @@ One difficulty in this setup is with the implementation of crossover - how does 
 
 Another potential difficulty is that a structural mutation - as opposed to mutations in, for instance, the weights of the connections - such as the addition of a node or connection can, while being promising for the future, be disruptive in the short-term (until it has been fine-tuned by less-disruptive mutations). How NEAT deals with this is by dividing genomes into species, which have a close genomic distance due to similarity, then having competition most intense within species, not between species (fitness sharing). How is genomic distance measured? It uses a combination of the number of non-homologous nodes and connections with measures of how much homologous nodes and connections have diverged since their common origin. (Non-homologous nodes and connections are termed disjoint or excess, depending on whether the numbers are from the same range or beyond that range; like most NEAT implementations, this one makes no distinction between the two.)
 
-![Image](imgs/NEAT1.png)
-![Image](imgs/NEAT2.png)
+<p align="center">
+<img src = "imgs/NEAT1.png">
+<img src = "imgs/NEAT2.png">
+</p>
 
 For more information on NEAT checkout the official NEAT-Python [Github Repo](https://github.com/CodeReclaimers/neat-python) or the [official documentation](https://neat-python.readthedocs.io/en/latest/index.html).
 
