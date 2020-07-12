@@ -61,6 +61,6 @@ python3 FlappyBird.py
 ```
 
 # Authors
-- Dipanshu Shukla - Initial work - [Github]()
+- Dipanshu Shukla - Initial work - [Github](https://github.com/DipanshuShukla)
 # License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/DipanshuShukla/NEAT-AI-Plays-Flappy-Bird/blob/master/LICENSE) file for details
