@@ -33,3 +33,34 @@ Another potential difficulty is that a structural mutation - as opposed to mutat
 ![Image](imgs/NEAT2.png)
 
 For more information on NEAT checkout the official NEAT-Python [Github Repo](https://github.com/CodeReclaimers/neat-python) or the [official documentation](https://neat-python.readthedocs.io/en/latest/index.html).
+
+# Overview of the Project
+Since Flappy Bird is a fairly simple game with s single tap as control for the game I decided to create a clone of the game in pygame an easy to use opensource library for python and try to integrate a reenforcement-learning model to the game. I've being wanting to experiment with the Neuroevolution of Augmenting Topologies (NEAT) model for a really long time and since this model is proven to have great results for applications with a small number of input and output nodes, this was perfect for my project.
+
+## Dependencies
+- Python3
+- Pygame
+- Neat-python
+
+## Getting Started
+- Clone this repository using the following command.
+```
+git clone https://github.com/DipanshuShukla/NEAT-AI-Plays-Flappy-Bird.git
+```
+- Go to the cloned directory.
+```
+cd NEAT-AI-Plays-Flappy-Bird
+```
+- Run the Flappy Bird AI.py file using the following command.
+```
+python3 Flappy Bird AI.py
+```
+- You can also play the Flappy Bird game yourself by running the FlappyBird.py file.
+```
+python3 FlappyBird.py
+```
+
+# Authors
+- Dipanshu Shukla - Initial work - [Github]()
+# License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/DipanshuShukla/NEAT-AI-Plays-Flappy-Bird/blob/master/LICENSE) file for details
