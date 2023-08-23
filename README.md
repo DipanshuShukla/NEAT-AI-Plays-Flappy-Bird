@@ -48,6 +48,12 @@ Since Flappy Bird is a fairly simple game with s single tap as control for the g
 - Pygame
 - Neat-python
 
+You can install these dependencies using the provided `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Getting Started
 - Clone this repository using the following command.
 ```
